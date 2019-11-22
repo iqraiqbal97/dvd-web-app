@@ -19,7 +19,6 @@
 		//scriplets - java code
 
 		ArrayList<Dvd> dvdArray = (ArrayList<Dvd>) request.getAttribute("dvds");
-
 	%>
 
 	<table>
@@ -28,14 +27,16 @@
 				<th>Title</th>
 				<th>Genre</th>
 				<th>Year</th>
-		</tr>
+				
+				
+			</tr>
 		</thead>
 
 		<tbody>
 			<%
 				for (Dvd dvd : dvdArray) {
-					out.print("<tr> <td>" + dvd.getTitle()+"</td> <td>" + dvd.getGenre()
-					+"</td> <td>" + dvd.getYear()+"</td></tr>");
+					out.print("<tr> <td>" + dvd.getTitle() + "</td> <td>" + dvd.getGenre() + "</td> <td>" + dvd.getYear()
+							+ "</td></tr>");
 				}
 			%>
 
